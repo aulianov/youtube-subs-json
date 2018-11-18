@@ -15,8 +15,10 @@ const getSubtitles = require('youtube-subs-json').getSubtitles;
 getSubtitles({
   videoID: 'XXXXX', // youtube video id or url
   lang: 'ru' // default: `en`
-}).then(function(captions) {
+}).then( captions => {
   console.log(captions)
+}).catch( err => {
+  console.err(err)
 })
 ```
 
