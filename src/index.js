@@ -40,7 +40,12 @@ exports.getSubtitles = (params) => new Promise(function (resolve, reject) {
       if (err) {
         reject(err)
       } else {
-        const src = info.requested_subtitles[lang] || info.automatic_captions[lang].find( cur => cur.ext === 'ttml' )
+        var src = false
+        if (info && info.requested_subtitles && info.requested_subtitles[lang]) {
+          src = info.requested_subtitles[lang]
+        } else if (info && info.automatic_captions && info.automatic_captions[lang] && typeof info.automatic_captions[lang] === 'object') {
+          src = info.automatic_captions[lang].find( cur => cur.ext === 'ttml' )
+        }
         if (src && src.url && src.ext === 'ttml') {
           request({
             url: src.url,
@@ -58,7 +63,7 @@ exports.getSubtitles = (params) => new Promise(function (resolve, reject) {
             reject(reason)
           })
         } else {
-          reject(new Error (`Sibs for videoID=${videoID} and lang=${lang} not found`))
+          reject(new Error (`Subs for videoID=${videoID} and lang=${lang} not found`))
         }
       }
     })

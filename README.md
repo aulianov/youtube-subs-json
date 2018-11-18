@@ -18,7 +18,7 @@ getSubtitles({
 }).then( captions => {
   console.log(captions)
 }).catch( err => {
-  console.err(err)
+  console.error(err)
 })
 ```
 

@@ -1,6 +1,6 @@
 {
   "name": "youtube-subs-json",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Get captions as json from youtube by youtube-dl",
   "main": "src/index.js",
   "scripts": {
