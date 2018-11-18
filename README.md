@@ -4,7 +4,7 @@
 
 ## Installation
 
-* `> npm youtube-subs-json`
+* `> npm install youtube-subs-json`
 
 ## Usage
 
