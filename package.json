@@ -1,6 +1,6 @@
 {
   "name": "youtube-subs-json",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Get captions as json from youtube by youtube-dl",
   "main": "src/index.js",
   "scripts": {
@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/aulianov/youtube-subs-json#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "request-promise": "^4.2.2",
-    "youtube-dl": "^1.12.2"
+    "cheerio": "^1.0.0-rc.3",
+    "request-promise": "^4.2.5",
+    "youtube-dl": "^2.1.0"
   }
 }
