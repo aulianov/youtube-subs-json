@@ -35,7 +35,7 @@ exports.getSubtitles = (params) => new Promise(function (resolve, reject) {
   const videoID = params.videoID || ''
   const lang = params.lang || 'en'
   if (videoID) {
-    const options = ['--write-sub', '--write-auto-sub', '--sub-format=ttml', '--sub-lang=' + lang]
+    const options = ['--write-sub', '--write-auto-sub', '--sub-format=ttml', '--sub-lang=' + lang, '--no-check-certificate']
     ytdl.getInfo(videoID, options, function(err, info) {
       if (err) {
         reject(err)
